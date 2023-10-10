@@ -34,7 +34,7 @@ fs.readFile("./tools/movies.json", "utf8", (err, response) => {
   for(let movie of data){
     const title = movie.title;
     delete movie.title;
-    setDoc(doc(db, "mavies", title), movie);
+    setDoc(doc(db, "movies", title), movie);
   }
 
 });
